@@ -179,12 +179,18 @@ def create_page(semaine):
 	page_content+="		<div class='bottom'>"
 	page_content+="			<table class='matieres'>"
 	page_content+="				<tr><th>Date</th><th>Horaires (de ...h à ...h)</th><th>Matière</th><th>Nom de l'enseignant</th><th>Signature de l'enseignants</th></th>"
+	i=0
 	for matiere in semaine["matieres"]:
 		page_content+="				<tr><td>%s</td><td>De %s à %s</td><td>%s</td><td>%s</td><td></td></tr>"%(matiere["date"],matiere["debut"],matiere["fin"],matiere["nom"],matiere["prof"])
+		i+=1
+	for j in range(i, 15):
+		page_content+="				<tr><td></td><td></td><td></td><td></td><td></td></tr>"
 	page_content+="			</table>"
 	page_content+="		</div>"
 	page_content+="		<div class='footer'>"
 	page_content+="			<table>"
+
+	page_content+="				<tr><td></td><td></td><td></td><td></td></tr>"
 	page_content+="				<tr><td></td><td>A Vélizy-Villacoubay, le</td><td></td><td></td></tr>"
 	page_content+="				<tr><td></td><td></td><td></td><td></td></tr>"
 	page_content+="				<tr><td></td><td>L'étudiant,</td><td></td><td>Le responsable pédagogique,</td></tr>"
@@ -192,8 +198,6 @@ def create_page(semaine):
 	page_content+="				<tr><td></td><td></td><td></td><td></td></tr>"
 	page_content+="				<tr><td></td><td></td><td></td><td></td></tr>"
 	page_content+="				<tr><td></td><td></td><td></td><td></td></tr>"	
-	page_content+="				<tr><td></td><td></td><td></td><td></td></tr>"
-	page_content+="				<tr><td></td><td></td><td></td><td></td></tr>"
 	page_content+="				<tr><td></td><td></td><td></td><td></td></tr>"
 	page_content+="			</table>"
 	page_content+="		</div>"
