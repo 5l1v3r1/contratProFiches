@@ -23,6 +23,7 @@ mat_codes={
    "Anglais - S9":"18SHANS9",
    "Langues Vivantes":"18SHANS9",
    "Management de projet":"18SHMP"
+   
 
 }
 
@@ -181,8 +182,9 @@ def create_page(semaine):
 	page_content+="				<tr><th>Date</th><th>Horaires (de ...h à ...h)</th><th>Matière</th><th>Nom de l'enseignant</th><th>Signature de l'enseignants</th></th>"
 	i=0
 	for matiere in semaine["matieres"]:
-		page_content+="				<tr><td>%s</td><td>De %s à %s</td><td>%s</td><td>%s</td><td></td></tr>"%(matiere["date"],matiere["debut"],matiere["fin"],matiere["nom"],matiere["prof"])
-		i+=1
+		if matiere["nom"]!="" and matiere["prof"]!="":
+			page_content+="				<tr><td>%s</td><td>De %s à %s</td><td>%s</td><td>%s</td><td></td></tr>"%(matiere["date"],matiere["debut"],matiere["fin"],matiere["nom"],matiere["prof"])
+			i+=1
 	for j in range(i, 15):
 		page_content+="				<tr><td></td><td></td><td></td><td></td><td></td></tr>"
 	page_content+="			</table>"
