@@ -86,7 +86,8 @@ def extract():
 		#print(prof)
 
 		mat={}
-		mat["date"]=str(jour)[:10]
+		mat["date"]=str(jour)[:10].split("-")
+		mat["date"]=mat["date"][2]+"/"+mat["date"][1]+"/"+mat["date"][0]
 		mat["debut"]=event.findtext('starttime')
 		mat["fin"]=event.findtext('endtime')
 		mat["nom"]=matiere
@@ -153,7 +154,7 @@ def create_page(semaine):
 	page_content+="			}\n"
 	page_content+="			.footer{\n"
 	page_content+="				position:absolute;\n"
-	page_content+="  				bottom:0;\n"
+	page_content+="  				bottom:150;\n"
 	page_content+="  				width:100%;\n"
 	page_content+="  				\n"
 	page_content+="   \n"
@@ -172,7 +173,7 @@ def create_page(semaine):
 	page_content+="			<tr><td colspan=5></td></tr>"
 	page_content+="			<tr><td><b>NOM :</b></td><td></td><td><b>Prénom :</b></td><td colspan='2'></td></tr>"
 	page_content+="			<tr><td></td><td>Du</td><td>Au</td><td colspan='2'></td></tr>"
-	page_content+="			<tr><td><b>Semaine %s</b></td><td>%s</td><td>%s</td><td colspan='2'></td></tr>"%(semaine["num"],semaine["date"],semaine["date_fin"])
+	page_content+="			<tr><td><b>Semaine %s</b></td><td>%s</td><td>%s</td><td colspan='2'></td></tr>"%(semaine["num"],semaine["date"],semaine["matieres"][-1]["date"])
 	page_content+="			<tr><td colspan=5></td></tr>"
 	page_content+="			<tr><td colspan=5></td></tr>"
 	page_content+="		</table>"
