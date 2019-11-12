@@ -22,8 +22,8 @@ mat_codes={
    "Création d'entreprise et défis de l'innovation":"18SHCEMS",
    "Anglais - S9":"18SHANS9",
    "Langues Vivantes":"18SHANS9",
-   "Management de projet":"18SHMP"
-   
+   "Management de projet":"18SHMP",
+   "Nouvelle Génération des Réseaux":"1"
 
 }
 
