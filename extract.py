@@ -23,7 +23,8 @@ mat_codes={
    "Anglais - S9":"18SHANS9",
    "Langues Vivantes":"18SHANS9",
    "Management de projet":"18SHMP",
-   "Nouvelle Génération des Réseaux":"1"
+   "Nouvelle Génération des Réseaux":" ",
+   "Systèmes Distribués":" "
 
 }
 
