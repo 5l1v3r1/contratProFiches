@@ -24,7 +24,7 @@ mat_codes={
    "Langues Vivantes":"18SHANS9",
    "Management de projet":"18SHMP",
    "Nouvelle Génération des Réseaux":" ",
-   "Systèmes Distribués":" "
+   "Systèmes Distribués":"  "
 
 }
 
