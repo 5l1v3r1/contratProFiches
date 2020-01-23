@@ -24,8 +24,8 @@ mat_codes={
    "Langues Vivantes":"18SHANS9",
    "Management de projet":"18SHMP",
    "Nouvelle Génération des Réseaux":" ",
-   "Systèmes Distribués":"  "
-
+   "Systèmes Distribués":"18STIAD",
+   "Ingénierie des Exigeances Métier":"18SDIIEM"
 }
 
 def mat_code(mat):
